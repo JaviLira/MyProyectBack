@@ -8,13 +8,17 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 
 import home.model.UserBase;
 import home.repository.UserRepo;
 
-public class MyUserDetailsService implements UserDetailsService{
 
-	@Autowired private UserRepo userRepo;
+
+@Component
+public class MyUserDetailsService implements UserDetailsService {
+
+    @Autowired private UserRepo userRepo;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
@@ -25,8 +29,6 @@ public class MyUserDetailsService implements UserDetailsService{
         return new org.springframework.security.core.userdetails.User(
                 email,
                 user.getPassword(),
-                Collections.singletonList(new SimpleGrantedAuthority(user.getRol().toString())));
+                Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
     }
-	
-	
 }

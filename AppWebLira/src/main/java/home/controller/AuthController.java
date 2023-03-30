@@ -19,7 +19,6 @@ public class AuthController {
 	  @GetMapping("/hola")
 	    public ResponseEntity<String> validarToken() {
 	    	try {
-	    		
 	    		return ResponseEntity.ok("holiwi");
 	    	}catch (Exception e) {
 				throw new EstandarExeption();
