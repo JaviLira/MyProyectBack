@@ -1,5 +1,7 @@
 package home.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,10 +10,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="usuario")
+@Table(name="Usuario")
 public class UserBase {
 	
 	@Id
@@ -19,16 +22,12 @@ public class UserBase {
 	private Long id;
 	private String name;
 	private String email;
-	private String calle;
 	private String telefono;
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String password;
 	private Roles rol=Roles.ROLE_USER;
-	
-	
-	
-	
-	
+	@OneToMany
+	private List<Chat> chats=new ArrayList<>();
 	
 	public UserBase(String name, String password) {
 		super();
@@ -53,12 +52,6 @@ public class UserBase {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getCalle() {
-		return calle;
-	}
-	public void setCalle(String calle) {
-		this.calle = calle;
-	}
 	public String getTelefono() {
 		return telefono;
 	}
@@ -77,6 +70,12 @@ public class UserBase {
 	public void setRol(Roles rol) {
 		this.rol = rol;
 	}
+	public List<Chat> getChats() {
+		return chats;
+	}
+	public void setChats(List<Chat> chats) {
+		this.chats = chats;
+	}
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -94,8 +93,8 @@ public class UserBase {
 	}
 	@Override
 	public String toString() {
-		return "UserBase [id=" + id + ", name=" + name + ", email=" + email + ", calle=" + calle + ", telefono="
-				+ telefono + ", password=" + password + ", rol=" + rol + "]";
+		return "UserBase [id=" + id + ", name=" + name + ", email=" + email + ", telefono=" + telefono + ", password="
+				+ password + ", rol=" + rol + ", chats=" + chats + "]";
 	}
 	
 	

@@ -1,5 +1,0 @@
-package home.model;
-
-public enum Roles {
-
-}
