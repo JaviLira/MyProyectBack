@@ -22,7 +22,6 @@ import home.repository.UserRepo;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired private UserRepo userRepo;
     @Autowired private JWTFilter filter;
     @Autowired private MyUserDetailsService uds;
 

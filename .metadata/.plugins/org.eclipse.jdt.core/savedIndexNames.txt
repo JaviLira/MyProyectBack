@@ -23,7 +23,6 @@ INDEX VERSION 1.134+C:\Users\macab\OneDrive\Escritorio\eclipse\Back\MyProyectBac
 990056972.index
 990452423.index
 3956139951.index
-3630821561.index
 2126376512.index
 3600714806.index
 563271759.index

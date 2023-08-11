@@ -5443,3 +5443,153 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 10:38:31.242
 !MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 10:50:39.195
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 10:51:18.098
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 10:53:35.812
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 10:56:04.297
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:12:03.509
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:12:06.628
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-08-11 11:16:13.964
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:17:39.407
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:18:07.370
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:18:40.278
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:18:45.733
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:20:20.254
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:20:32.022
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:21:29.411
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-08-11 11:21:40.271
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:21:45.710
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:35:39.537
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:36:04.667
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-08-11 11:36:26.337
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:36:53.650
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:37:05.005
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:37:37.320
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:37:39.559
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:38:16.359
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:38:27.150
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-08-11 11:40:10.269
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:40:47.548
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:41:09.353
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:41:40.178
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:41:41.442
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:43:13.296
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:43:28.377
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:43:41.252
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:44:24.225
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:44:33.673
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:44:54.584
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:44:56.782
+!MESSAGE Classpath changed for project: AppWebLira
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-11 11:45:26.138
+!MESSAGE Classpath changed for project: AppWebLira

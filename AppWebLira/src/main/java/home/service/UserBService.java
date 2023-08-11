@@ -18,6 +18,10 @@ public class UserBService {
 		return repoUser.findById(id).orElse(null);
 	}
 	
+	public UserBase buscarUsuarioByName(String name) {
+		return repoUser.findByName(name);
+	}
+	
 	public List<UserBase> findAll() {
 		return repoUser.findAll();
 	}
