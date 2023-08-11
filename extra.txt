@@ -1,0 +1,1 @@
+docker run --name mariadbChat -e MYSQL_ROOT_PASSWORD=LoraDelRio2001 -p 3307:3306 -d mariadb:11.0.2
