@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Mensaje")
+@Table(name="mensaje")
 public class Mensajes {
 	
 	@Id
@@ -31,6 +31,12 @@ public class Mensajes {
 		this.usuarioEmisor = usuarioEmisor;
 		this.conversacion = conversacion;
 	}
+
+	public Mensajes() {
+		super();
+	}
+
+
 
 	public Long getId() {
 		return id;

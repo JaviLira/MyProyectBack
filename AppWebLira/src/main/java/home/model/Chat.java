@@ -12,23 +12,25 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
-@Table(name="Chat")
+@Table(name="chat")
 public class Chat {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@JsonIgnore
 	@OneToMany
-	private List<Mensajes> listapedidos=new ArrayList<>();
+	private List<Mensajes> listaMensajes=new ArrayList<>();
+	@JsonIgnore
 	@ManyToMany
 	private List<UserBase> listaUsuarios=new ArrayList<>();
-	
 	
 	public Chat() {
 		super();
 	}
-
 
 	public Long getId() {
 		return id;
@@ -40,13 +42,13 @@ public class Chat {
 	}
 
 
-	public List<Mensajes> getListapedidos() {
-		return listapedidos;
+	public List<Mensajes> getListaMensajes() {
+		return listaMensajes;
 	}
 
 
-	public void setListapedidos(List<Mensajes> listapedidos) {
-		this.listapedidos = listapedidos;
+	public void setListaMensajes(List<Mensajes> listapedidos) {
+		this.listaMensajes = listapedidos;
 	}
 
 
@@ -80,7 +82,7 @@ public class Chat {
 
 	@Override
 	public String toString() {
-		return "Chat [id=" + id + ", listapedidos=" + listapedidos + ", listaUsuarios=" + listaUsuarios + "]";
+		return "Chat [id=" + id + ", listaMensajes=" + listaMensajes + ", listaUsuarios=" + listaUsuarios + "]";
 	}
 	
 	
