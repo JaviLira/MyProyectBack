@@ -26,4 +26,13 @@ public class UserBService {
 		return repoUser.findAll();
 	}
 	
+	public UserBase comprobarRolAdministrador(String email) {
+		UserBase result = repoUser.findByEmail(email).orElse(null);
+		if ("ADMIN".equals(result.getRol())) {
+			return result;
+		} else {
+			return null;
+		}
+	}
+	
 }

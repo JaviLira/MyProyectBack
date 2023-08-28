@@ -33,7 +33,7 @@ import home.security.JWTUtil;
 import home.service.UserBService;
 
 @RestController
-@CrossOrigin("http://localhost:4200/user/")
+@CrossOrigin("http://localhost:4200")
 public class UserController {
 	
 
@@ -43,7 +43,7 @@ public class UserController {
     @Autowired private PasswordEncoder passwordEncoder;
 	@Autowired private UserBService serviceUsuario;
 
-	  @GetMapping("/login")
+	  @PostMapping("/user/login")
 	  public Map<String, Object> loginHandler(@RequestBody LoginCredentials body){
 	        try {
 	            UsernamePasswordAuthenticationToken authInputToken =
@@ -59,7 +59,7 @@ public class UserController {
 	        }
 	    }
 	  
-	  @PostMapping("/register")
+	  @PostMapping("/user/register")
 	    public Map<String, Object> registerHandler(@RequestBody UserBase user) {
 		  if (userRepo.findByEmail(user.getEmail()).orElse(null)==null) {
 	            String encodedPass = passwordEncoder.encode(user.getPassword());
@@ -72,7 +72,7 @@ public class UserController {
 			}
 	    }
 	  
-	    @GetMapping("email/{email}")
+	    @GetMapping("/user/email/{email}")
 	    public ResponseEntity<UserBase> comprobarEmail(@PathVariable String email) {
 	    	UserBase respuesta = serviceUsuario.buscarUsuario(email);
 	    	
@@ -84,7 +84,7 @@ public class UserController {
 	    	
 	    }
 	    
-	    @GetMapping("email")
+	    @GetMapping("/user/email")
 	    public UserBase comprobarEmail(
 	    		@RequestParam(required = false) String email,
 				@RequestParam(required = false) String username) {
@@ -97,7 +97,7 @@ public class UserController {
 	    	
 	    }
 	    
-	    @GetMapping("/validarToken")
+	    @GetMapping("/user/validarToken")
 	    public ResponseEntity<UserBase> validarToken() {
 	    	try {
 	    		String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -106,6 +106,24 @@ public class UserController {
 	    	}catch (Exception e) {
 				throw new TokenNoValidoExeption();
 			}
+	    }
+	    @GetMapping("/user")
+	    public ResponseEntity <UserBase> getUsuario() {
+	    	String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+	        
+			return ResponseEntity.ok(serviceUsuario.buscarUsuario(email));
+	    }
+	    
+	    @GetMapping("/validarRolAdministrador")
+	    public ResponseEntity<UserBase> validarRolAdministrador() {
+	    	try {
+	    		String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+	    		UserBase result=serviceUsuario.comprobarRolAdministrador(email);
+	  		return ResponseEntity.ok(result);
+	  		
+	    	}catch (Exception e) {
+	  			throw new TokenNoValidoExeption();
+	  		}
 	    }
 	  
 	  @ExceptionHandler(ExisteUsuarioNotFoundExeption.class)

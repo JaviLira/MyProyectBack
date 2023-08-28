@@ -14,9 +14,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import home.repository.UserRepo;
-
-
 
 @Configuration
 @EnableWebSecurity
@@ -32,7 +29,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors()
                 .and()
                 .authorizeHttpRequests()
+                .antMatchers("/user").hasAnyRole("USER","ADMIN")
+        		.antMatchers("/user/email/{email}").permitAll()
+                .antMatchers("/user/login").permitAll()
                 .antMatchers("/hola").permitAll()
+                .antMatchers("/validarRolAdministrador").permitAll()
                 .and()
                 .userDetailsService(uds)
                 .exceptionHandling()
