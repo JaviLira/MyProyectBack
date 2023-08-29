@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import home.model.Roles;
 import home.model.UserBase;
 import home.repository.UserRepo;
 
@@ -28,7 +29,7 @@ public class UserBService {
 	
 	public UserBase comprobarRolAdministrador(String email) {
 		UserBase result = repoUser.findByEmail(email).orElse(null);
-		if ("ADMIN".equals(result.getRol())) {
+		if (Roles.ROLE_ADMIN.equals(result.getRol())) {
 			return result;
 		} else {
 			return null;

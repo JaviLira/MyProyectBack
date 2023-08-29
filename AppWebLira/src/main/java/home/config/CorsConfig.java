@@ -14,31 +14,45 @@ public class CorsConfig implements WebMvcConfigurer{
 				String url="http://localhost:4200";
 				//login
 				registry.addMapping("/hola").allowedOrigins(url)
+				.allowedMethods("GET", "POST", "OPTIONS", "PUT","DELETE")
 		        .allowedHeaders("GET", "POST", "OPTIONS", "PUT", "Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-		                "Access-Control-Request-Headers")
+		                "Access-Control-Request-Headers","Authorization")
 		        .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
 				
 				registry.addMapping("/user").allowedOrigins(url)
+				.allowedMethods("GET", "POST", "OPTIONS", "PUT","DELETE")
 		        .allowedHeaders("GET", "POST", "OPTIONS", "PUT", "Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-		                "Access-Control-Request-Headers")
+		                "Access-Control-Request-Headers","Authorization")
 		        .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
 				
 				registry.addMapping("/user/login").allowedOrigins(url)
+				.allowedMethods("GET", "POST", "OPTIONS", "PUT","DELETE")
 		        .allowedHeaders("GET", "POST", "OPTIONS", "PUT", "Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-		                "Access-Control-Request-Headers")
+		                "Access-Control-Request-Headers","Authorization")
+		        .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
+				
+				registry.addMapping("/user/register").allowedOrigins(url)
+				.allowedMethods("GET", "POST", "OPTIONS", "PUT","DELETE")
+		        .allowedHeaders("GET", "POST", "OPTIONS", "PUT", "Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
+		                "Access-Control-Request-Headers","Authorization")
+		        .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
+				
+				registry.addMapping("/user/email").allowedOrigins(url)
+				.allowedMethods("GET", "POST", "OPTIONS", "PUT","DELETE")
+		        .allowedHeaders("GET", "POST", "OPTIONS", "PUT", "Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
+		                "Access-Control-Request-Headers","Authorization")
 		        .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
 				
 				registry.addMapping("/user/email/{email}").allowedOrigins(url)
+				.allowedMethods("GET", "POST", "OPTIONS", "PUT","DELETE")
 		        .allowedHeaders("GET", "POST", "OPTIONS", "PUT", "Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-		                "Access-Control-Request-Headers")
+		                "Access-Control-Request-Headers","Authorization")
 		        .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
 				
-				
-				
-				
 				registry.addMapping("/validarRolAdministrador").allowedOrigins(url)
+				.allowedMethods("GET", "POST", "OPTIONS", "PUT","DELETE")
 		        .allowedHeaders("GET", "POST", "OPTIONS", "PUT", "Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-		                "Access-Control-Request-Headers")
+		                "Access-Control-Request-Headers","Authorization")
 		        .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
 
 				
